@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Won Ko — robotics and control engineer focused on autonomous-vehicle control, state estimation, motion planning, system identification, and real-robot validation.">
+<title>Won Ko · Autonomous Driving Control & Planning</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="assets/styles.css">
+</head><body>
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="./">Won Ko · Autonomous Driving Control</a><nav>
+<a class="active" href="./">About</a><a href="projects/">Projects</a><a href="cv/">CV</a><a href="portfolio/">Portfolio</a>
+</nav></div></header>
+<main class="wrap"><div class="grid">
+<aside class="sidebar">
+<img class="avatar" src="assets/profile.jpg" alt="Won Ko">
+<div class="name">Won Ko</div>
+<div class="title">Senior Researcher · Robotics &amp; Control · Autonomous Systems</div>
+<ul class="meta">
+<li><i class="fa-solid fa-building-columns"></i><span>Mobyus Future Tech R&amp;D Lab</span></li>
+<li><i class="fa-solid fa-graduation-cap"></i><span>UC Santa Cruz · M.S. / B.S. Computer Engineering<br>Robotics &amp; Control</span></li>
+<li><i class="fa-solid fa-envelope"></i><span><a href="mailto:kowon861@gmail.com">kowon861@gmail.com</a></span></li>
+
+<li><i class="fa-regular fa-file-pdf"></i><span><a href="assets/Won_Ko_RideFlux_Vehicle_Control_CV.pdf">CV</a></span></li>
+</ul></aside>
+<section class="main">
+<div class="hero">
+<div class="kicker">Autonomous Driving · Robotics &amp; Control</div>
+<h1 class="hero-title">Vehicle Control, Motion Planning &amp; State Estimation</h1>
+<p class="hero-sub">Senior Researcher focused on robotics and control, with experience in state estimation, stochastic optimal control, motion planning, and real-robot autonomy. Work spans EKF/ESKF, system identification, Frenet/B-spline trajectory tracking, and ROS 2 autonomous systems.</p>
+<div class="chips"><span class="chip">Optimal Control</span><span class="chip">State Estimation</span><span class="chip">System Identification</span><span class="chip">Motion Planning</span><span class="chip">ROS 2</span><span class="chip">Real-Robot Validation</span></div>
+<div class="button-row"><a class="button primary" href="projects/">View Control &amp; Planning Projects</a><a class="button" href="assets/Won_Ko_RideFlux_Vehicle_Control_CV.pdf">CV PDF</a><a class="button" href="assets/Won_Ko_RideFlux_Control_Planning_Portfolio.pdf">Research Portfolio PDF</a></div>
+</div>
+
+<div class="focus-grid">
+<div class="focus-card"><div class="label">Primary</div><h3>Vehicle Control</h3><p>Optimal control, trajectory tracking, system identification, state estimation, motion planning, and real-system validation.</p></div>
+<div class="focus-card"><div class="label">Secondary</div><h3>Planning &amp; Prediction</h3><p>Frenet/B-spline trajectory generation, obstacle and collision avoidance, vehicle-intent prediction, interaction reasoning, and simulation validation.</p></div>
+</div>
+
+<h2>Robotics &amp; Control foundation</h2>
+<p>My B.S. and M.S. work at UC Santa Cruz concentrated on robotics and control, including stochastic Dynamic Programming / HJB-style optimal control, EKF and nonlinear state estimation, system identification with batch and recursive least squares, and GPS-free autonomous navigation.</p>
+<div class="metrics"><div class="metric"><div class="num">34,596</div><div class="desc">states in the stochastic DP / HJB policy</div></div><div class="metric"><div class="num">23 / 23</div><div class="desc">terminal-success validation tests</div></div><div class="metric"><div class="num">≤ 30 mm</div><div class="desc">controlled-testbed forklift localization error</div></div></div>
+
+<h2>Applied autonomous systems</h2>
+<ul class="research-list">
+<li><strong>Vehicle / robot motion:</strong> Frenet-frame trajectory generation, B-spline smoothing/tracking, obstacle avoidance, pallet docking, and physical execution on autonomous forklifts.</li>
+<li><strong>State estimation:</strong> EKF/ESKF, LiDAR–IMU localization, Kalman filtering, nonlinear estimation, GTSAM/iSAM2, and failure-aware localization diagnostics.</li>
+<li><strong>Modeling &amp; control:</strong> stochastic optimal control, HJB/value iteration, system identification, least-squares model estimation, and uncertainty-aware simulation.</li>
+<li><strong>Planning &amp; prediction:</strong> real-road vehicle intent / trajectory prediction, critical-scenario reasoning, and V2V conflict-region coordination using ETA, priority, and safety margins.</li>
+<li><strong>Supporting perception &amp; localization:</strong> calibrated LiDAR intensity, prior-map localization, RGB-D / visual-aided LIO evaluation, and sensor calibration/synchronization.</li>
+</ul>
+
+<h2>Selected work</h2>
+<div class="entry"><div class="entry-head"><h3><a href="projects/#optimal-control">Stochastic Optimal Control for GPS-Free Autonomous Navigation</a></h3><span class="entry-date">UC Santa Cruz</span></div><p>Dynamic Programming / HJB-style policy optimization with model uncertainty, state estimation, and closed-loop simulation validation.</p></div>
+<div class="entry"><div class="entry-head"><h3><a href="projects/#forklift">Autonomous Forklift Motion Planning &amp; Real-Robot Validation</a></h3><span class="entry-date">Mobyus</span></div><p>Frenet/B-spline trajectory generation and tracking integrated with ESKF-based LiDAR–IMU state estimation, obstacle avoidance, docking, perception, and PLC-facing execution.</p></div>
+<div class="entry"><div class="entry-head"><h3><a href="projects/#continental">Vehicle Trajectory Prediction &amp; Critical-Scenario Reasoning</a></h3><span class="entry-date">Continental-sponsored UCSC project</span></div><p>Real intersection radar/camera data, temporal trajectory preprocessing, classical ML/LSTM prediction, and safety-oriented conflict reasoning.</p></div>
+<div class="entry"><div class="entry-head"><h3><a href="projects/#v2v">Interaction-Aware Motion Coordination &amp; Collision Avoidance</a></h3><span class="entry-date">Applied R&amp;D</span></div><p>Peer pose/path exchange, conflict-region reasoning, ETA/priority logic, and per-robot target-speed coordination.</p></div>
+</section></div></main></body></html>
