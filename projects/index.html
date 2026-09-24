@@ -155,42 +155,49 @@
       </div>
 
       <!-- 3. Prediction -->
-      <div class="item" id="continental-intelligent-intersection">
-        <div class="row">
-          <span class="where">Continental Intelligent Intersection — Vehicle Intent &amp; Trajectory Prediction</span>
-          <span class="when">Sep 2018 · Jun 2019</span>
-        </div>
-        <div class="sub">Continental-sponsored UC Santa Cruz project · radar/camera environment-model data from a real Walnut Creek intersection</div>
+        <div class="item" id="continental-intelligent-intersection">
+          <div class="row">
+            <span class="where">Continental Intelligent Intersection - Real-World Vehicle Data</span>
+            <span class="when">Sep 2018 · Jun 2019</span>
+          </div>
+          <div class="sub">Continental-sponsored UC Santa Cruz project · radar/camera environment-model data from a real Walnut Creek intersection</div>
 
-        <div class="project-media continental-media">
-          <div class="media-col continental-stack">
-            <div class="media fixed-media">
-              <video class="continental-loop" autoplay muted loop playsinline preload="auto" poster="../assets/videos/critical_scenarios.gif" aria-label="Continental Intelligent Intersection animated scenario preview">
-                <source src="../assets/videos/Continental_loop.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
+          <div class="project-media">
+            <div class="media-col" style="width:100%; max-width:420px;">
+              <div style="width:100%; height:240px; overflow:hidden; border-radius:10px;">
+                <img src="/assets/videos/critical_scenarios.gif"
+                     alt="Continental Intelligent Intersection critical-scenario visualization"
+                     style="width:100%; height:100%; object-fit:cover; display:block;">
+              </div>
+
+              <div style="width:100%; height:240px; margin-top:8px; overflow:hidden; border-radius:10px; background:#000;">
+                <video controls preload="metadata" playsinline
+                       style="width:100%; height:100%; object-fit:contain; display:block;">
+                  <source src="/assets/videos/Continental.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </div>
-            <div class="media fixed-media">
-              <video controls preload="metadata" playsinline poster="../assets/posters/Continental.jpg">
-                <source src="../assets/videos/Continental.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="demo-caption">Real-road trajectory data, critical-scenario visualization, and project video</div>
-          </div>
-          <div class="content">
-            <ul>
-              <li><b>Real-world sensor data:</b> processed Continental-provided temporal radar environment-model data and synchronized camera footage from a real intelligent-intersection site.</li>
-              <li><b>Trajectory preprocessing:</b> used timestamp, object ID, x/y position, velocity, heading, object type, and time-in-intersection features; built turn-direction labeling around crosswalk line-segment intersections.</li>
-              <li><b>Sequence prediction:</b> evaluated classical ML and LSTM models for driver-intent / vehicle-trajectory prediction; team results reported 89.5% before-intersection and 98.6% after-intersection accuracy for the best LSTM configuration.</li>
-              <li><b>Safety reasoning:</b> connected predicted intent and path geometry to vehicle-path crossings, shared exit/lane conflicts, and vehicle-pedestrian crosswalk conflicts.</li>
-            </ul>
-            <div class="tag-row">
-              <span class="tag">Real-World Data</span><span class="tag">Radar + Camera</span><span class="tag">LSTM</span><span class="tag">Trajectory Prediction</span><span class="tag">Critical Scenarios</span>
+
+            <div class="content">
+              <ul>
+                <li><b>Real-world sensor data:</b> worked on a team project using Continental-provided temporal radar environment-model data and camera footage from a real intelligent-intersection test site.</li>
+                <li><b>Trajectory preprocessing:</b> processed timestamped object trajectories using object ID, x/y position, velocity, heading, object type, and time-in-intersection features; built turn-direction labeling and cleaning around crosswalk line-segment intersections.</li>
+                <li><b>Sequence prediction:</b> evaluated classical machine-learning and LSTM models for driver-intent / vehicle-trajectory prediction; team results reported 89.5% before-intersection and 98.6% after-intersection accuracy for the best LSTM configuration.</li>
+                <li><b>Safety reasoning:</b> connected predicted vehicle intent and path geometry to critical scenarios including vehicle-path crossings, shared exit/lane conflicts, and vehicle-pedestrian crosswalk conflicts.</li>
+              </ul>
+
+              <div class="tag-row">
+                <span class="tag">Real-World Data</span>
+                <span class="tag">Radar + Camera</span>
+                <span class="tag">LSTM</span>
+                <span class="tag">Trajectory Prediction</span>
+                <span class="tag">Critical Scenarios</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+
 
       <!-- 4. V2V planning/control -->
       <div class="item" id="v2v-collision-avoidance">
