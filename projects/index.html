@@ -1,20 +1,319 @@
 <!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Control, planning, prediction, state-estimation, and autonomous-robot projects by Won Ko."><title>Projects · Won Ko</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><link rel="stylesheet" href="../assets/styles.css">
-</head><body><header class="topbar"><div class="topbar-inner"><a class="brand" href="../">Won Ko · Autonomous Driving Control</a><nav><a href="../">About</a><a class="active" href="./">Projects</a><a href="../cv/">CV</a><a href="../portfolio/">Portfolio</a></nav></div></header>
-<main class="wrap"><div class="grid"><aside class="sidebar"><img class="avatar" src="../assets/profile.jpg" alt="Won Ko"><div class="name">Won Ko</div><div class="title">Robotics &amp; Control · Autonomous Driving Control &amp; Planning</div><ul class="meta"><li><i class="fa-solid fa-building-columns"></i><span>Mobyus Future Tech R&amp;D Lab</span></li><li><i class="fa-solid fa-graduation-cap"></i><span>UC Santa Cruz · Robotics &amp; Control</span></li><li><i class="fa-regular fa-file-pdf"></i><span><a href="../assets/Won_Ko_RideFlux_Vehicle_Control_CV.pdf">CV</a></span></li><li><i class="fa-regular fa-file-pdf"></i><span><a href="../assets/Won_Ko_RideFlux_Control_Planning_Portfolio.pdf">Portfolio</a></span></li></ul></aside>
-<section class="main"><div class="kicker">Control · Planning · Prediction · Localization</div><h1>Projects</h1><p class="lead">Selected work emphasizing robotics and control fundamentals, motion planning, prediction, state estimation, and real-system validation.</p>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Vehicle control, planning, state-estimation, prediction, SLAM, and autonomous-robotics projects by Won Ko.">
+  <title>Projects · Won Ko</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/styles.css?v=3">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../">Won Ko · Autonomous Driving Control</a>
+    <nav>
+      <a href="../">About</a>
+      <a class="active" href="./">Projects</a>
+      <a href="../cv/">CV</a>
+      <a href="../portfolio/">Portfolio</a>
+    </nav>
+  </div>
+</header>
 
-<div class="project-entry" id="optimal-control"><div class="entry-head"><h3>Stochastic Optimal Control, State Estimation &amp; System Identification</h3><span class="entry-date">UC Santa Cruz · M.S. Research</span></div><div class="entry-subtitle">Autonomously Driving Tricycle with Monocular Vision</div><ul class="entry-list"><li>Formulated stochastic Dynamic Programming / HJB-style value iteration using robot-frame relative position and terminal heading, with 11 discrete turn-rate actions and minimum-time / control-effort objectives.</li><li>Computed a 34,596-state policy and validated terminal success in 23/23 simulation tests; across 2,400 matched simulations, reduced mean arrival time by 2.2–4.9 s depending on the matched condition/baseline.</li><li>Designed EKF and second-order nonlinear state estimators for pose, velocity, and heading under noisy monocular measurements.</li><li>Performed system identification in V-REP/MATLAB using batch least squares and recursive least squares for discrete/continuous dynamic models.</li></ul><div class="tags"><span class="tag">Stochastic DP</span><span class="tag">HJB / Value Iteration</span><span class="tag">EKF</span><span class="tag">System Identification</span><span class="tag">MATLAB / V-REP</span></div><div class="media-wrap"><video controls preload="metadata" playsinline><source src="../assets/videos/stochastic_DP_controller.mp4" type="video/mp4"></video><div class="media-caption">Stochastic optimal-control policy and GPS-free navigation simulation.</div></div></div>
+<main class="wrap">
+  <div class="grid">
+    <aside class="sidebar">
+      <img class="avatar" src="../assets/profile.jpg" alt="Won Ko">
+      <div class="name">Won Ko</div>
+      <div class="title">Robotics &amp; Control · Vehicle Control · Planning &amp; Prediction</div>
+      <ul class="meta">
+        <li><i class="fa-solid fa-building-columns"></i><span>Mobyus Future Tech R&amp;D Lab</span></li>
+        <li><i class="fa-solid fa-graduation-cap"></i><span>UC Santa Cruz · M.S. / B.S. Computer Engineering<br>Robotics &amp; Control</span></li>
+        <li><i class="fa-solid fa-envelope"></i><span><a href="mailto:kowon861@gmail.com">kowon861@gmail.com</a></span></li>
+        <li><i class="fa-regular fa-file-pdf"></i><span><a href="../assets/Won_Ko_RideFlux_Vehicle_Control_CV.pdf">CV</a></span></li>
+        <li><i class="fa-regular fa-file-pdf"></i><span><a href="../assets/Won_Ko_RideFlux_Control_Planning_Portfolio.pdf">Portfolio</a></span></li>
+      </ul>
+    </aside>
 
-<div class="project-entry" id="forklift"><div class="entry-head"><h3>Autonomous Forklift Motion Planning &amp; Real-Robot Validation</h3><span class="entry-date">Mobyus · 2024–2025</span></div><div class="entry-subtitle">Trajectory generation, path following, state estimation, docking, and closed-loop warehouse validation</div><ul class="entry-list"><li>Generated Frenet/B-spline trajectories and validated path following on an autonomous forklift in real warehouse conditions.</li><li>Integrated ESKF-based LiDAR–IMU localization and ROS 2 navigation so trajectory generation receives stable state estimates.</li><li>Connected obstacle avoidance, pallet docking, perception support, and PLC-facing workflows into the autonomy stack.</li><li>Used calibration, log analysis, trajectory comparison, timing/RMSE analysis, and failure diagnostics to reproduce and validate system behavior.</li></ul><div class="tags"><span class="tag">Frenet</span><span class="tag">B-spline</span><span class="tag">ESKF</span><span class="tag">ROS 2</span><span class="tag">Real Robot</span><span class="tag">PLC</span></div><div class="media-wrap"><video controls preload="metadata" playsinline poster="../assets/posters/AFL_DEMO1.jpg"><source src="../assets/videos/AFL_DEMO1.mp4" type="video/mp4"></video><div class="media-caption">Autonomous forklift navigation and docking on real warehouse hardware.</div></div></div>
+    <section class="main">
+      <div class="kicker">Selected Technical Work</div>
+      <h1>Control, Planning &amp; Autonomous Robotics Projects</h1>
+      <p class="lead">Projects spanning stochastic optimal control, state estimation, motion planning, prediction, real-robot autonomy, localization, and sensor integration.</p>
 
-<div class="project-entry" id="continental"><div class="entry-head"><h3>Vehicle Trajectory Prediction &amp; Critical-Scenario Reasoning</h3><span class="entry-date">Continental-sponsored UCSC project · 2018–2019</span></div><div class="entry-subtitle">Real-road radar/camera environment-model data from a Walnut Creek intersection</div><ul class="entry-list"><li>Processed temporal radar environment-model data and synchronized camera footage using timestamp, object ID, x/y position, velocity, heading, object type, and time-in-intersection features.</li><li>Built trajectory labeling around crosswalk line-segment intersections to classify left, straight, and right movement intent.</li><li>Evaluated classical ML and LSTM sequence models for driver-intent / trajectory prediction and critical-scenario reasoning.</li><li>Team-reported best LSTM accuracy was 89.5% before intersection entry and 98.6% after entry.</li></ul><div class="tags"><span class="tag">Radar + Camera</span><span class="tag">Trajectory Prediction</span><span class="tag">LSTM</span><span class="tag">Critical Scenarios</span></div><div class="split-media"><div><img src="../assets/videos/critical_scenarios.gif" alt="Critical scenario examples"><div class="media-caption">Critical-scenario examples from the real intersection dataset.</div></div><div><video controls preload="metadata" playsinline poster="../assets/posters/Continental.jpg"><source src="../assets/videos/Continental.mp4" type="video/mp4"></video><div class="media-caption">Continental intelligent-intersection project overview.</div></div></div></div>
+      <div class="chips project-jump">
+        <a class="chip" href="#tricycle-stochastic-dp">Optimal Control</a>
+        <a class="chip" href="#forklift-control">Forklift Control &amp; Planning</a>
+        <a class="chip" href="#continental-intelligent-intersection">Prediction</a>
+        <a class="chip" href="#v2v-collision-avoidance">V2V Coordination</a>
+        <a class="chip" href="#intensity-localization">Intensity Localization</a>
+        <a class="chip" href="#visual-lio">Visual-Aided LIO</a>
+      </div>
 
-<div class="project-entry" id="v2v"><div class="entry-head"><h3>Interaction-Aware Motion Coordination &amp; Collision Avoidance</h3><span class="entry-date">Applied R&amp;D</span></div><div class="entry-subtitle">Trajectory-conflict reasoning, ETA / priority coordination, and simulation validation in shared regions</div><ul class="entry-list"><li>Exchanged peer robot pose/path information for crossing, following, and facing interactions.</li><li>Reasoned about path intersections and shared occupancy/conflict regions.</li><li>Used ETA / priority and safety margins to coordinate per-robot target speed around conflict areas.</li><li>Co-inventor, KR Application 10-2024-0041376 — V2V-based collision avoidance for autonomous mobile robots (pending / unexamined).</li></ul><div class="tags"><span class="tag">V2V</span><span class="tag">Collision Avoidance</span><span class="tag">ETA / Priority</span><span class="tag">Simulation</span></div><div class="media-wrap"><video controls preload="metadata" playsinline><source src="../assets/videos/v2v_collision_avoidance.mp4" type="video/mp4"></video><div class="media-caption">Public simulation demo; implementation source remains private.</div></div></div>
+      <!-- 1. Robotics & Control foundation -->
+      <div class="item featured-project" id="tricycle-stochastic-dp">
+        <div class="row">
+          <span class="where">Autonomously Driving Tricycle with Monocular Vision</span>
+          <span class="when">M.S. Project · UC Santa Cruz</span>
+        </div>
+        <div class="sub">Vision-based state estimation and stochastic optimal control for GPS-free autonomous navigation</div>
 
-<h2>Supporting localization &amp; sensor-fusion work</h2>
-<div class="project-entry" id="intensity-localization"><div class="entry-head"><h3>Robust Prior-Map Localization with Calibrated LiDAR Intensity</h3><span class="entry-date">Ongoing R&amp;D</span></div><ul class="entry-list"><li>Built incident-angle/range-aware intensity calibration and keyframe-derived priormaps.</li><li>Used 20×60 Intensity Scan Context for bounded candidate/yaw prescoring before small-GICP geometric acceptance, with intensity MAE/RMSE diagnostics for failure analysis.</li></ul><div class="media-wrap"><video controls preload="metadata" playsinline poster="../assets/posters/intensity_localization.jpg"><source src="../assets/videos/intensity_localization.mp4" type="video/mp4"></video></div></div>
-<div class="project-entry" id="visual-lio"><div class="entry-head"><h3>Camera–LiDAR Integration &amp; Visual-Aided LIO / VIO</h3><span class="entry-date">Ongoing Prototype</span></div><ul class="entry-list"><li>Added synchronized RGB-D/depth-supported visual feature projection and keyframe persistence to the LIO pipeline.</li><li>Implemented FOV/depth association, timing, confidence, conflict, and occlusion diagnostics while keeping LiDAR–inertial odometry as the authoritative pose backbone.</li></ul><div class="media-wrap"><img src="../assets/posters/camera_lidar_visual_aided_lio_summary.png" alt="Camera-LiDAR visual-aided LIO summary"></div></div>
-</section></div></main></body></html>
+        <div class="project-media wide-media">
+          <div class="media-col">
+            <div class="media">
+              <video controls preload="metadata" playsinline>
+                <source src="../assets/videos/stochastic_DP_controller.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="demo-caption">Demo: stochastic Dynamic Programming / HJB policy execution in V-REP simulation</div>
+          </div>
+          <div class="content">
+            <ul>
+              <li><b>Stochastic optimal control:</b> formulated a Dynamic Programming / HJB-style policy using robot-frame relative position, terminal heading, 11 turn-rate actions, diffusion noise, and a minimum-time / control-effort objective.</li>
+              <li><b>Validation:</b> computed a 34,596-state policy and validated 23/23 terminal-success tests; matched simulations retained 100% terminal success and reduced mean arrival time by 2.2–4.9 s depending on the condition/baseline.</li>
+              <li><b>State estimation:</b> developed EKF and second-order nonlinear state estimators for pose, velocity, and heading from noisy monocular-camera position measurements.</li>
+              <li><b>System identification:</b> estimated propeller-actuated mechanism dynamics using batch least squares and recursive least squares in MATLAB/V-REP.</li>
+              <li><b>Camera calibration:</b> implemented single- and two-pose monocular calibration using projective geometry and least-squares estimation.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">Stochastic DP</span><span class="tag">HJB</span><span class="tag">EKF</span><span class="tag">System Identification</span><span class="tag">Optimal Control</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Real robot control/planning -->
+      <div class="item" id="forklift-control">
+        <div class="row">
+          <span class="where">Autonomous Forklift Motion Planning &amp; Real-Robot Validation</span>
+          <span class="when">Nov 2024 · Oct 2025</span>
+        </div>
+        <div class="sub">Mobyus Future Tech R&amp;D Lab · trajectory generation, state estimation, avoidance, docking, perception support, and physical validation</div>
+
+        <div class="project-media">
+          <div class="media-col">
+            <div class="media">
+              <video controls preload="metadata" playsinline poster="../assets/posters/AFL_DEMO1_poster.jpg">
+                <source src="../assets/videos/AFL_DEMO1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="demo-caption">Demo: autonomous forklift localization, navigation, path following, and docking</div>
+          </div>
+          <div class="content">
+            <ul>
+              <li><b>Motion planning &amp; tracking:</b> integrated Frenet-frame / B-spline trajectory generation and tracking on autonomous-forklift hardware.</li>
+              <li><b>State-estimation backbone:</b> built and validated ESKF-based LiDAR–IMU localization with ≤30 mm position error in controlled testbed evaluation.</li>
+              <li><b>Closed-loop autonomy:</b> connected obstacle avoidance, pallet docking, perception support, and PLC-facing execution into the ROS 2 autonomy stack.</li>
+              <li><b>Physical validation:</b> used calibration, trajectory comparison, timing/RMSE analysis, logging, and failure diagnostics to reproduce and validate behavior on real robots.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">Frenet</span><span class="tag">B-spline</span><span class="tag">ESKF</span><span class="tag">ROS 2</span><span class="tag">PLC</span><span class="tag">Real Robot</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-media afl-row">
+          <div class="media-col">
+            <div class="media">
+              <video controls preload="metadata" playsinline poster="../assets/posters/AFL_avoidance_poster.jpg">
+                <source src="../assets/videos/AFL_avoidance.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="demo-caption">Demo: depth camera + LiDAR obstacle detection and avoidance</div>
+          </div>
+          <div class="content">
+            <ul>
+              <li><b>Obstacle avoidance:</b> integrated depth-camera and LiDAR obstacle information with navigation for safer motion around dynamic and occluded warehouse obstacles.</li>
+              <li><b>System behavior:</b> validated avoidance together with trajectory generation/tracking rather than as an isolated perception demo.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-media afl-row">
+          <div class="media-col">
+            <div class="media">
+              <video controls preload="metadata" playsinline poster="../assets/posters/AFL_pallet_perception_poster.jpg">
+                <source src="../assets/videos/AFL_pallet_perception.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="demo-caption">Demo: pallet-hole keypoints and truck free-space perception</div>
+          </div>
+          <div class="content">
+            <ul>
+              <li><b>Pallet handling support:</b> developed pallet fork-pocket keypoint estimation and pallet sizing with learned keypoints and geometric constraints; validated hole detection at 4 m with ~0.5° angular error.</li>
+              <li><b>Free-space estimation:</b> used ZED2i stereo and object detection to estimate available loading space in truck/trailer scenes.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Prediction -->
+      <div class="item" id="continental-intelligent-intersection">
+        <div class="row">
+          <span class="where">Continental Intelligent Intersection — Vehicle Intent &amp; Trajectory Prediction</span>
+          <span class="when">Sep 2018 · Jun 2019</span>
+        </div>
+        <div class="sub">Continental-sponsored UC Santa Cruz project · radar/camera environment-model data from a real Walnut Creek intersection</div>
+
+        <div class="project-media continental-media">
+          <div class="media-col continental-stack">
+            <div class="media fixed-media">
+              <img src="../assets/videos/critical_scenarios.gif" alt="Continental Intelligent Intersection critical-scenario visualization">
+            </div>
+            <div class="media fixed-media">
+              <video controls preload="metadata" playsinline poster="../assets/posters/Continental.jpg">
+                <source src="../assets/videos/Continental.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="demo-caption">Real-road trajectory data, critical-scenario visualization, and project video</div>
+          </div>
+          <div class="content">
+            <ul>
+              <li><b>Real-world sensor data:</b> processed Continental-provided temporal radar environment-model data and synchronized camera footage from a real intelligent-intersection site.</li>
+              <li><b>Trajectory preprocessing:</b> used timestamp, object ID, x/y position, velocity, heading, object type, and time-in-intersection features; built turn-direction labeling around crosswalk line-segment intersections.</li>
+              <li><b>Sequence prediction:</b> evaluated classical ML and LSTM models for driver-intent / vehicle-trajectory prediction; team results reported 89.5% before-intersection and 98.6% after-intersection accuracy for the best LSTM configuration.</li>
+              <li><b>Safety reasoning:</b> connected predicted intent and path geometry to vehicle-path crossings, shared exit/lane conflicts, and vehicle-pedestrian crosswalk conflicts.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">Real-World Data</span><span class="tag">Radar + Camera</span><span class="tag">LSTM</span><span class="tag">Trajectory Prediction</span><span class="tag">Critical Scenarios</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. V2V planning/control -->
+      <div class="item" id="v2v-collision-avoidance">
+        <div class="row">
+          <span class="where">V2V Multi-Robot Collision Avoidance &amp; Motion Coordination</span>
+          <span class="when">Patent-related R&amp;D</span>
+        </div>
+        <div class="sub">Peer-to-peer trajectory-conflict reasoning, ETA / priority coordination, and target-speed control</div>
+
+        <div class="project-media">
+          <div class="media-col">
+            <div class="media">
+              <video controls preload="metadata" playsinline poster="../assets/posters/v2v_collision_avoidance_poster.jpg">
+                <source src="../assets/videos/v2v_collision_avoidance.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="demo-caption">Demo: multi-robot collision-avoidance simulation with path interaction and speed coordination</div>
+          </div>
+          <div class="content">
+            <ul>
+              <li><b>Interaction handling:</b> used peer pose/path information for crossing, following, and facing interactions.</li>
+              <li><b>Conflict reasoning:</b> evaluated path intersections and shared occupancy/conflict regions.</li>
+              <li><b>Motion coordination:</b> used ETA / priority and safety margins to coordinate per-robot target speed around conflict areas.</li>
+              <li><b>Applied output:</b> co-inventor, KR Application 10-2024-0041376 — V2V-based collision avoidance for autonomous mobile robots (pending / unexamined).</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">V2V</span><span class="tag">Collision Avoidance</span><span class="tag">ETA / Priority</span><span class="tag">Path Interaction</span><span class="tag">Simulation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-heading">Supporting Localization, SLAM &amp; Sensor-Fusion Work</h2>
+      <p class="section-intro">Control and planning depend on reliable state information. These projects show the localization and sensor-integration work supporting the autonomy stack.</p>
+
+      <!-- 5. Intensity localization -->
+      <div class="item" id="intensity-localization">
+        <div class="row">
+          <span class="where">Robust Prior-Map Localization with Calibrated LiDAR Intensity</span>
+          <span class="when">Ongoing R&amp;D</span>
+        </div>
+        <div class="sub">Global localization / relocalization for repetitive warehouse environments</div>
+
+        <div class="project-media wide-media">
+          <div class="media-col">
+            <div class="media">
+              <video controls preload="metadata" playsinline poster="../assets/posters/intensity_localization_poster.jpg">
+                <source src="../assets/videos/intensity_localization.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="demo-caption">Demo: LiDAR-intensity priormap localization and real-robot operation</div>
+          </div>
+          <div class="content">
+            <ul>
+              <li><b>Intensity calibration:</b> built incident-angle/range-aware reflectivity calibration and keyframe-derived intensity priormaps that remain pose-consistent with the geometric map.</li>
+              <li><b>Global hypothesis ranking:</b> implemented 20×60 Intensity Scan Context with bounded candidate/yaw prescoring before small-GICP geometric acceptance.</li>
+              <li><b>Validation:</b> instrumented intensity MAE/RMSE and localization diagnostics; Recall@K, false-match, pose-error, and perturbation evaluation remains in progress.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">Intensity Scan Context</span><span class="tag">Priormap</span><span class="tag">small-GICP</span><span class="tag">Relocalization</span>
+            </div>
+          </div>
+        </div>
+
+        <details class="tech-details">
+          <summary>Localization stack reliability &amp; optimization details</summary>
+          <div class="details-body">
+            <ul>
+              <li>Improved a LIO-SAM / SC-LIO-SAM-derived ROS 2 stack with GTSAM/iSAM2, IMU-preintegration recovery, scan-to-map safeguards, abnormal-motion diagnostics, and map-integrity protection.</li>
+              <li>Added Hessian damping, Cholesky/SVD fallback, degeneracy projection, bounded optimization updates, and rollback for ill-conditioned scan-to-map cases.</li>
+              <li>Controlled single-factory-bag A/B testing reduced mean localization cycle time from 45.75 to 42.49 ms and P95 from 64.11 to 60.52 ms; repeat-bag validation remains pending.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+
+      <!-- 6. Visual-aided LIO -->
+      <div class="item" id="visual-lio">
+        <div class="row">
+          <span class="where">Camera–LiDAR Integration &amp; Visual-Aided LIO / VIO</span>
+          <span class="when">Ongoing Prototype</span>
+        </div>
+        <div class="sub">Visual/depth cues as support for a LiDAR–inertial localization backbone</div>
+
+        <div class="pipeline" aria-label="Visual-aided LIO pipeline">
+          <span>LIO pose backbone</span><i class="fa-solid fa-arrow-right"></i>
+          <span>RGB-D / depth sync</span><i class="fa-solid fa-arrow-right"></i>
+          <span>Visual feature projection</span><i class="fa-solid fa-arrow-right"></i>
+          <span>Keyframe visual maps</span>
+        </div>
+
+        <div class="media summary-media">
+          <img src="../assets/posters/camera_lidar_visual_aided_lio_summary.png" alt="Camera–LiDAR Integration and Visual-Aided LIO summary diagram">
+        </div>
+        <ul>
+          <li>Defined camera–LiDAR mounting and TF integration with LIO-SAM retained as the authoritative robot pose, avoiding competing VIO TF trees.</li>
+          <li>Added synchronized RGB-D/depth-supported visual feature projection with timing, FOV/depth association, confidence, conflict, and occlusion diagnostics.</li>
+          <li>Persisted per-keyframe visual depth/RGB and corner/surface/pole clouds and rebuilt global visual maps; asynchronous RGB updates preserve depth/feature processing when color arrives later.</li>
+        </ul>
+      </div>
+
+      <h2 class="section-heading">Earlier Robotics &amp; Mechatronics</h2>
+      <details class="project-archive" id="mechatronics">
+        <summary>Autonomous Mechatronics Robot · Apr 2019 – Jun 2019</summary>
+        <div class="project-media archive-media">
+          <div class="media-col">
+            <div class="media">
+              <video controls preload="metadata" playsinline poster="../assets/posters/Mechatronics_poster.jpg">
+                <source src="../assets/videos/Mechatronics.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="demo-caption">Demo: event-driven autonomous mechatronics robot</div>
+          </div>
+          <div class="content">
+            <ul>
+              <li>Built a real autonomous robot with Uno32, DC motors, servos, optical/IR sensing, custom signal-conditioning circuits, and an event-driven hierarchical state machine in Embedded C.</li>
+              <li>Integrated synchronous sensor sampling, H-bridge/PWM motor control, obstacle handling, and end-to-end hardware/software testing.</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+    </section>
+  </div>
+</main>
+</body>
+</html>
