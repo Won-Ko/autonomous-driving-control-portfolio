@@ -131,3 +131,12 @@ html,body{overflow-x:hidden}
   .project-media .media video,
   .project-media .media img{max-height:none}
 }
+
+/* Continental animated preview: autoplaying, muted loop sized like other project media. */
+.continental-loop {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background: #000;
+}
